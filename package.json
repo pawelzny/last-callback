@@ -1,8 +1,8 @@
 {
   "name": "last-callback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Paweł Zadrożny <pawel.zny@gmail.com> (http://pawelzny.com/npm/env)",
-  "description": "Get last argument and call if it is a function.",
+  "description": "Get and call last given argument if is a function.",
   "keywords": [
     "last",
     "callback",
@@ -10,7 +10,7 @@
     "arguments"
   ],
   "license": "MIT",
-  "homepage": "https://pawelzny.com/npm/dotenv-loader",
+  "homepage": "https://pawelzny.com/npm/last-callback",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pawelzny/last-callback.git"
