@@ -75,9 +75,7 @@
         "no-delete-var": ["error"],
         "no-label-var": ["error"],
         "no-undefined": ["error"],
-        "no-unused-vars": ["warn", {
-            "args": "after-used"
-        }],
+        "no-unused-vars": 0,
         "array-bracket-spacing": ["warn", "never"],
         "block-spacing": ["warn", "never"],
         "brace-style": ["warn", "1tbs", {

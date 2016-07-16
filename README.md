@@ -1,12 +1,12 @@
-# last-callback v1.0.1
+# last-callback v 1.0.3
 
 ## Description
 
 Get and call last given argument if is a function. You do not need to check last argument manually any more.
 All you need to do is to pass arguments array to this little module, then call it, or bind with `this` context.
-Last-callback always return a function with build in validation. Last not callable argument will be omitted without throwing any exception.
+Last-callback always return function with built in validation. Last non callable argument will be ignored without throwing any exception.
 
-last-callback is compatybile with ES5 and latest.
+last-callback is compatible with ES5 and latest.
 
 [![npm](https://img.shields.io/npm/l/last-callback.svg?maxAge=2592000)]()
 [![npm](https://img.shields.io/npm/dt/last-callback.svg?maxAge=2592000)]()
@@ -18,7 +18,7 @@ last-callback is compatybile with ES5 and latest.
 
 NodeJS >= 4.4.0
 
-## Instalation
+## installation
 
 with NPM:
 
@@ -32,15 +32,15 @@ last-callback respects: bind, call, and apply methods;
 
 ### ES6 Style
 
-If you are using `NodeJS >= 6.2` You should definitly use __ES6 style__ with spread operators.
+If you are using `NodeJS >= 6.2` You should definitely use __ES6 style__ with spread operators.
 
 ```javascript
 const lastCallback = require('last-callback');
 
-function myFunc (param1) {
+function myFunc (param) {
     let callback = lastCallback(...arguments);
 
-    callback(param1);
+    callback(param);
 }
 
 myFunc('test value', function (param) {
@@ -56,10 +56,10 @@ If you are still using `NodeJS < 6.2.0`, i.e. `NodeJS 4.4.7 LTS`, you can use __
 ```javascript
 var lastCallback = require('last-callback');
 
-function myFunc (param1) {
+function myFunc (param) {
     var callback = lastCallback.apply(null, arguments);
 
-    callback(param1);
+    callback(param);
 }
 
 myFunc('test value', function (param) {
@@ -72,12 +72,12 @@ myFunc('test value', function (param) {
 ```javascript
 var lastCallback = require('last-callback');
 
-function myFunc (param1) {
+function myFunc (param) {
     var callback = lastCallback.apply(null, arguments);
 
     this.contextVariable = 'this is my context';
 
-    callback.call(this, param1); // bind context if you need it
+    callback.call(this, param); // bind context if you need it
 }
 
 myFunc('test value', function (param) {
@@ -88,33 +88,33 @@ myFunc('test value', function (param) {
 
 ### Recursive callback
 
-You can use recursive callbacks if needed.
+You can use recursive callback if needed.
 
 ```javascript
 const lastCallback = require('last-callback');
 
 let
-    iterator = 1,
+    iteration = 1,
     limit = 5;
 
-function myFunc (iterator) {
+function myFunc (iteration) {
     let callback = lastCallback(...arguments);
 
-    callback(iterator);
+    callback(iteration);
 }
 
-function recursiveCallabck (iterator) {
-    if (iterator === limit) {
+function recursiveCallabck (iteration) {
+    if (iteration >= limit) {
         return;
     }
 
-    console.log(iterator);
+    console.log(iteration);
 
-    iterator += 1;
-    recursiveCallabck(iterator);
+    iteration += 1;
+    recursiveCallabck(iteration);
 }
 
-myFunc(iterator, recursiveCallabck);
+myFunc(iteration, recursiveCallabck);
 // console log:
 // 1
 // 2
