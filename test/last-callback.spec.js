@@ -8,7 +8,7 @@ describe('dotenv-loader interface', function () {
     describe("#lastCallback()", () => {
         it('should return function', function () {
             function testFunc (param1, param2) {
-                var callback = lastCallback.call(null, param1, param2);
+                let callback = lastCallback.call(null, param1, param2);
 
                 assert.isFunction(callback);
             }
@@ -17,10 +17,11 @@ describe('dotenv-loader interface', function () {
 
         it('should have all given parameters', function () {
             function testFunc (param1, param2, param3) {
-                var callback = lastCallback.apply(null, arguments);
+                let
+                    callback = lastCallback.apply(null, arguments),
+                    context = {param0: 'private parameter 0'};
 
-                this.param0 = 'private parameter 0';
-                callback.call(this, param1, param2, param3);
+                callback.call(context, param1, param2, param3);
             }
 
             testFunc('param 1', 'param 2', 'param 3', function (param1, param2, param3) {

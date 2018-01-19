@@ -1,7 +1,7 @@
 {
   "name": "last-callback",
   "version": "1.0.3",
-  "author": "Paweł Zadrożny <pawel.zny@gmail.com> (http://pawelzny.com/npm/env)",
+  "author": "Paweł Zadrożny <pawel.zny@gmail.com> (http://pawelzny.com/)",
   "description": "Get and call last given argument if is a function.",
   "keywords": [
     "last",
@@ -27,9 +27,10 @@
     "node": ">= 4.4.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "istanbul": "^0.4.4",
-    "mocha": "^2.5.3",
-    "sinon": "^1.17.4"
+    "chai": "4.1.2",
+    "eslint": "4.15.0",
+    "istanbul": "0.4.4",
+    "mocha": "5.0.0",
+    "sinon": "4.1.6"
   }
 }

@@ -18,12 +18,32 @@
  *
  * @returns {Function} callback wrapper
  */
-module.exports = function lastCallback () {
-    var last = arguments[arguments.length - 1];
+'use strict';
+module.exports = lastCallback;
 
-    return function callback () {
+/**
+ * Extract last argument and check if is callable.
+ * If so, create inner callback function which apply all arguments for callback.
+ *
+ * If last argument is not callable, inner callback will provide empty callable vessel.
+ *
+ * @returns {function} callback
+ */
+function lastCallback (...args) {
+    let last = args.pop();
+
+    /**
+     * Callable vessel.
+     *
+     * @this allow to pass context from caller to callback.
+     *
+     * @returns {*}
+     */
+    function callback () {
         if (typeof last === 'function') {
-            last.apply(this, arguments);
+            return last.apply(this, args);
         }
-    };
-};
+    }
+
+    return callback;
+}

@@ -11,7 +11,7 @@ last-callback is compatible with ES5 and latest.
 [![npm](https://img.shields.io/npm/l/last-callback.svg?maxAge=2592000)]()
 [![npm](https://img.shields.io/npm/dt/last-callback.svg?maxAge=2592000)]()
 [![node](https://img.shields.io/node/v/last-callback.svg?maxAge=2592000)]()
-[![Maintenance](https://img.shields.io/maintenance/yes/2016.svg?maxAge=2592000)]()
+[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?maxAge=2592000)]()
 [![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)]()
 
 ## Requirements
