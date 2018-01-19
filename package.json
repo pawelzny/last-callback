@@ -1,13 +1,15 @@
 {
   "name": "last-callback",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "author": "Paweł Zadrożny <pawel.zny@gmail.com> (http://pawelzny.com/)",
-  "description": "Get and call last given argument if is a function.",
+  "description": "Extract function's last argument and wrap with ready to invoke function.",
   "keywords": [
     "last",
     "callback",
     "function",
-    "arguments"
+    "argument",
+    "parameter",
+    "callback wrapper"
   ],
   "license": "MIT",
   "homepage": "https://pawelzny.com/npm/last-callback",
@@ -24,7 +26,7 @@
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
   },
   "engines": {
-    "node": ">= 4.4.0"
+    "node": ">= 8.9.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
