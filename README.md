@@ -114,7 +114,7 @@ secretPassword = 'I am real secret';
 execute(secretPassword, returnSecret);
 
 // will return 'Luke I am your father'
-executeContext(secretPassword, {secret: 'Luke I am your father}, returnSecret);
+executeContext(secretPassword, {secret: 'Luke I am your father'}, returnSecret);
 ```
 
 ### Recursive callback
