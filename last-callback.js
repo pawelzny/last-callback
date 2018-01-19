@@ -26,6 +26,7 @@ module.exports = lastCallback;
  * If so, create inner callback function which apply all arguments for callback.
  *
  * If last argument is not callable, inner callback will provide empty callable vessel.
+ * @param {*} args
  *
  * @returns {function} callback
  */
@@ -36,10 +37,11 @@ function lastCallback (...args) {
      * Callable vessel.
      *
      * @this allow to pass context from caller to callback.
+     * @param {*} args
      *
      * @returns {*}
      */
-    function callback () {
+    function callback (...args) {
         if (typeof last === 'function') {
             return last.apply(this, args);
         }
