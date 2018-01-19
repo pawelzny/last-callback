@@ -30,13 +30,13 @@ For NodeJS 4.4, 6.x and 7.x use last-callback version 1.0.3
 
 with NPM:
 
-```javascript
+```shell
 npm install -S last-callback
 ```
 
 For older NodeJS
 
-```javascript
+```shell
 npm install -S last-callback@1.0.3
 ```
 
