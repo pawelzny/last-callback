@@ -199,7 +199,9 @@
     "no-unused-vars": [
       "warn",
       {
-        "args": "after-used"
+        "vars": "local",
+        "args": "after-used",
+        "ignoreRestSiblings": true
       }
     ],
     "array-bracket-spacing": [
@@ -329,10 +331,6 @@
       }
     ],
     "space-before-blocks": [
-      "warn",
-      "always"
-    ],
-    "space-before-function-paren": [
       "warn",
       "always"
     ],
