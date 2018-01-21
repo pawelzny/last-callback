@@ -1,4 +1,4 @@
-# last-callback v 2.0.0
+# last-callback v2.0.1
 
 Extract function's last argument and wrap with ready to invoke function.
 If last argument is callable, hence callback - wrapper will invoke it.
@@ -25,6 +25,8 @@ NodeJS >= 8.9.0
 <div style="color: red; font-weight: 700;">
 For NodeJS 4.4, 6.x and 7.x use last-callback version 1.0.3
 </div>
+
+Version for browsers is compatible with ES5.
 
 ## installation
 
