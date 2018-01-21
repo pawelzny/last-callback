@@ -1,6 +1,6 @@
 {
   "name": "last-callback",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Paweł Zadrożny <pawel.zny@gmail.com> (http://pawelzny.com/)",
   "description": "Extract function's last argument and wrap with ready to invoke function.",
   "keywords": [
