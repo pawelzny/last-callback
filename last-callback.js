@@ -4,13 +4,13 @@
  * given context, and arguments.
  *
  * Last callback returns safe function ready to call.
- * Basicly last-callback it's a wrapper around your callback function.
+ * Basically last-callback it's a wrapper around your callback function.
  *
  * @module last-callback
- * @author Paweł Zadrożny <pawel.zany@gmail.com> (https://pawelzny.com/)
+ * @author Paweł Zadrożny <pawel.zny@gmail.com> (https://pawelzny.com/)
  * @copyright Paweł Zadrożny 2016
  * @license MIT
- * @version 1.0.3
+ * @version 2.0.1
  *
  * @example
  * const callback = lastCallback(...arguments); // set callback
